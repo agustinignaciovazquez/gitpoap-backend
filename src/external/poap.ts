@@ -46,7 +46,7 @@ async function retrievePOAPToken(): Promise<string | null> {
   const poapResponse = await fetch(`${POAP_AUTH_URL}/oauth/token`, {
     method: 'POST',
     body: JSON.stringify({
-      audience: 'gitpoap',
+      audience: 'https://api.poap.tech/',
       grant_type: 'client_credentials',
       client_id: POAP_CLIENT_ID,
       client_secret: POAP_CLIENT_SECRET,
